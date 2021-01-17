@@ -1,0 +1,32 @@
+{
+    "id": "5597C296",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1609589828006.0,
+    "source_on_save": false,
+    "relative_order": 5,
+    "properties": {
+        "expression": "cats",
+        "caption": "cats",
+        "totalObservations": 3,
+        "displayedObservations": 3,
+        "variables": 2,
+        "cacheKey": "7405DF37",
+        "object": "cats",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=cats&cache_key=7405DF37&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 8315178041041580647,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1609589828006,
+    "read_only": false,
+    "read_only_alternatives": []
+}

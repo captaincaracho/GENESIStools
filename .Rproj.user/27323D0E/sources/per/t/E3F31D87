@@ -1,0 +1,32 @@
+{
+    "id": "E3F31D87",
+    "path": null,
+    "project_path": null,
+    "type": "r_dataframe",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1609344120296.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "expression": "import",
+        "caption": "import",
+        "totalObservations": 1332,
+        "displayedObservations": 1332,
+        "variables": 12,
+        "cacheKey": "FBF8CE39",
+        "object": "import",
+        "environment": "",
+        "contentUrl": "grid_resource/gridviewer.html?env=&obj=import&cache_key=FBF8CE39&max_cols=50",
+        "preview": 0
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1609343979,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1609344120296,
+    "read_only": false,
+    "read_only_alternatives": []
+}
