@@ -1,6 +1,6 @@
-#'Get Dataset on the most granular level
+#'Clean ffcsv for further use
 #'
-#'Reduce downloaded flatfile csv from GENESIS systems to clean datasets on the most granular level possible.
+#'Reduce downloaded flatfile csv (ffcsv) to clean dataset on the most granular level possible.
 #'
 #'@param import a flatfile csv downloaded from a GENESIS system
 #'@param removetotal logical value whether to include total columns. Defaults to FALSE.
@@ -39,12 +39,17 @@
 #'
 #'@examples
 #'#A table from Regionalstatistik.de
-#'input   <- read.csv2("22221-01-01-4_flat.csv", colClasses = "character",encoding = "Latin-1")
-#'output  <- granular(input, ags ="keep")
+#'
+#'GENESIStools::deeplink_download(db = "NRW" , table= "12411-01i")
+#'
+#'input   <- read.csv2("12411-01i.csv", colClasses = "character",encoding = "Latin-1")
+#'
+#'output  <- ffcsv_clean(input, ags ="keep")
+#'
 #'@export
 
 
-norm <- read.csv2("22221-01-01-4_flat.csv", colClasses = "character",encoding = "Latin-1")
+norm <- read.csv2("a.csv", colClasses = "character",encoding = "Latin-1")
 
 #To do
 #check charset
@@ -55,7 +60,7 @@ norm <- read.csv2("22221-01-01-4_flat.csv", colClasses = "character",encoding = 
 
 
 
-granular <- function(import,
+ffcsv_clean <- function(import,
                      removetotal = TRUE,
                      removestat  = TRUE,
                      ags         = "remove"
@@ -86,7 +91,7 @@ granular <- function(import,
 
 
   #check categorical variables
-  cats <- unique.data.frame(import[,names(import)[grepl("_Merkmal_Label",names(import))]])
+  cats <- unique.data.frame(as.data.frame(import[,names(import)[grepl("_Merkmal_Label",names(import))]]))
 
   #count number of unique values in supposedly constant columns
   num_unique <- sapply(cats, function(x) length(unique(x)))
@@ -181,4 +186,3 @@ return(import)
 
 }
 
-test <- granular(norm, ags ="keep")
